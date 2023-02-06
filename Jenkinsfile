@@ -21,8 +21,8 @@ pipeline {
             steps {
                 sh '''
                       ssh -i /home/jenkins/.ssh/myKey -o StrictHostKeyChecking=no ubuntu@3.9.29.51
-                      touch /home/ubuntu/readme
-                      echo "hello" > /home/ubuntu/readme
+                      sudo touch /home/ubuntu/readme
+                      sudo echo "hello" > /home/ubuntu/readme
                     '''
             }
         }
