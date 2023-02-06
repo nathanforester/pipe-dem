@@ -23,8 +23,8 @@ pipeline {
                    #!/bin/bash
                    ssh -i /home/jenkins/.ssh/myKey -o StrictHostKeyChecking=no ubuntu@172.31.41.152 << EOF
                    cd /home/ubuntu/
-                   touch readme
-                   echo "hello" >> readme
+                   sudo touch readme
+                   sudo echo "hello" >> readme
                    << EOF
                 '''
             }
