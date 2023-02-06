@@ -20,10 +20,11 @@ pipeline {
         stage('connect via ssh deploy server') {
             steps {
                 sh '''
-                      ssh -i /home/jenkins/.ssh/myKey -o StrictHostKeyChecking=no ubuntu@3.9.29.51
+                      ssh -i /home/jenkins/.ssh/myKey -o StrictHostKeyChecking=no ubuntu@3.9.29.51 << EOF
                       sudo touch /home/ubuntu/readme
                       sudo echo "hello" > /home/ubuntu/readme
-                    '''
+                      EOF
+                   '''
             }
         }
     }
