@@ -22,9 +22,7 @@ pipeline {
                 sh '''
                    #!/bin/bash
                    ssh -i /home/jenkins/.ssh/myKey -o StrictHostKeyChecking=no ubuntu@172.31.41.152 << EOF
-                   cd /home/ubuntu/
-                   sudo touch readme
-                   sudo echo "hello" >> readme
+                   sudo apt install nginx -y
                    << EOF
                 '''
             }
